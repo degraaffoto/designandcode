@@ -1,0 +1,21 @@
+mixin face(face, words, name)
+  li.face(style="background-image: url(#{face});")
+    .bubble
+      p #{words}
+      cite - #{name}
+
+section.mentoring#mentoring
+  .flex.flex--center
+    .col-1
+      ul.faces
+        +face("http://fillmurray.com/80/80","Hay","Bill")
+        +face("http://fillmurray.com/80/80","Bye","Vill")
+        +face("http://fillmurray.com/80/80","Ola","Fill")
+        +face("http://fillmurray.com/80/80","Aloha","Mill")
+        +face("http://fillmurray.com/80/80","Hallo","Jill")
+        +face("http://fillmurray.com/80/80","Yo","Till")
+        li.back-btn.face
+
+    .col-1
+      p.home-lead.outdented ...Mentoring people like you...
+      a(href="").home-cta Schedule a Call
